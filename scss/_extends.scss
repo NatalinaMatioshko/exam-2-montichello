@@ -1,0 +1,26 @@
+@use "./vars" as v;
+
+%montserrat {
+  font-family: v.$font-primary, sans-serif;
+}
+
+%title-base {
+  @extend %montserrat;
+  text-transform: uppercase;
+  color: v.$main-color;
+  font-weight: v.$second-font-weight;
+  text-align: center;
+}
+
+%btn-base {
+  @extend %montserrat;
+  display: block;
+  text-transform: uppercase;
+  font-weight: v.$main-font-weight;
+  font-size: v.$third-font-size;
+  color: v.$third-color;
+  border: 1px solid v.$main-color;
+  width: 190px;
+  height: 50px;
+  cursor: pointer;
+}

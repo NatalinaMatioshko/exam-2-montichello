@@ -4,22 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Montichello</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
+
     <link
       rel="icon"
       type="image/png"
@@ -38,16 +23,16 @@
 
           <ul class="nav_menu">
             <li class="nav_menu__item">
-              <a class="nav_menu__link" href="#projects">About us</a>
+              <a class="nav_menu__link" href="#projects">Our Coffee</a>
             </li>
             <li class="nav_menu__item">
-              <a class="nav_menu__link" href="#gallery">Projects</a>
+              <a class="nav_menu__link" href="#gallery">Coffee Moments</a>
             </li>
             <li class="nav_menu__item">
-              <a class="nav_menu__link" href="#news">News</a>
+              <a class="nav_menu__link" href="#news">Coffee Journal</a>
             </li>
             <li class="nav_menu__item">
-              <a class="nav_menu__link" href="#contact">Contact</a>
+              <a class="nav_menu__link" href="#contact">Visit Us</a>
             </li>
           </ul>
 
@@ -92,20 +77,365 @@
 
     <main>
       <!-- ==================    HERO     ======================== -->
-      <section class="section hero"></section>
+      <section class="section section__1"></section>
 
       <!-- ========================    PROJECTS     ================================= -->
 
-      <section class="section projects" id="projects"></section>
+      <section class="section section__2" id="projects">
+        <div class="wrapper">
+          <div class="container project">
+            <h2 class="title title_two">Our Craft</h2>
+
+            <div class="project__info">
+              <div class="img_container">
+                <img
+                  class="img_proj proj_img"
+                  src="./assets/img/espresso-machine-bar.jpg"
+                  alt="Espresso machine at a coffee bar"
+                  width="630"
+                  height="470"
+                />
+              </div>
+
+              <div class="info_card">
+                <h4 class="title title__4">Roasting Perfection</h4>
+                <h2 class="title">Coffee Experience</h2>
+                <p class="text">
+                  Every cup starts with freshly roasted beans, precise brewing,
+                  and a bit of love. We believe coffee is more than a drink —
+                  it’s a ritual that awakens your senses.
+                </p>
+                <button class="proj_btn btn" type="button">
+                  Discover More
+                </button>
+                <span class="project__location"
+                  >Kyiv, Ukraine — Single Origin Beans</span
+                >
+              </div>
+            </div>
+
+            <div class="project__info">
+              <div class="img_container">
+                <img
+                  class="img_proj proj_img"
+                  src="./assets/img/coffee-pour-action.jpg"
+                  alt="Pouring coffee into a cup"
+                  width="630"
+                  height="470"
+                />
+              </div>
+
+              <div class="info_card">
+                <h4 class="title title__4">From Bean to Cup</h4>
+                <h2 class="title title__2">The Art of Brewing</h2>
+                <p class="text">
+                  From pour-over to espresso, each method reveals a unique story
+                  of the bean. We source responsibly, roast mindfully, and brew
+                  with precision — every day.
+                </p>
+                <button class="proj_btn btn" type="button">
+                  Discover More
+                </button>
+                <span class="project__location">Ethiopia — Washed Arabica</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- ========================    news     ================================= -->
 
-      <section class="section news" id="news"></section>
+      <section class="section section__3" id="news">
+        <div class="wrapper_n">
+          <div class="container">
+            <h2 class="title title_two">Coffee Journal</h2>
+
+            <div class="slider_cont">
+              <!-- ====================1====================== -->
+
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/coffee-bean-samples.jpg"
+                  alt="Different coffee bean samples displayed"
+                />
+
+                <div class="new_info">
+                  <h3 class="title title__3">How We Roast: Behind the Aroma</h3>
+                  <p class="text">
+                    Discover what makes our roasting process special — from
+                    temperature curves to bean profiles.
+                  </p>
+                  <div class="user">
+                    <img
+                      class="user__img"
+                      src="./assets/img/users/user1.jpg"
+                      alt="user"
+                    />
+                    <div class="user__info">
+                      <h5 class="title title__5">Natalia M.</h5>
+                      <time class="time" datetime="20 Jan 2020"
+                        >20 Jan 2025</time
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ===================2======================= -->
+
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/affogato-dessert-coffee.jpg"
+                  alt="Affogato dessert with espresso and ice cream"
+                />
+
+                <div class="new_info">
+                  <h3 class="title title__3">
+                    Affogato Magic: Coffee Meets Dessert
+                  </h3>
+                  <p class="text">
+                    A perfect balance of bitter espresso and sweet vanilla ice
+                    cream — simplicity that melts your heart.
+                  </p>
+                  <div class="user">
+                    <img
+                      class="user__img"
+                      src="./assets/img/users/user2.png"
+                      alt="user"
+                    />
+                    <div class="user__info">
+                      <h5 class="title title__5">Dmytro K.</h5>
+                      <time class="time" datetime="13 Dec 2019"
+                        >13 Dec 2024</time
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- ====================3===================== -->
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/coffee-beans-in-jar.jpg"
+                  alt="Coffee beans stored in a glass jar"
+                />
+
+                <div class="new_info">
+                  <h3 class="title title__3">
+                    Why Freshly Ground Beans Matter
+                  </h3>
+                  <p class="text">
+                    Grinding right before brewing keeps the flavor vibrant and
+                    rich — taste the difference yourself.
+                  </p>
+                  <div class="user">
+                    <img
+                      class="user__img"
+                      src="./assets/img/users/user3.png"
+                      alt="user"
+                    />
+                    <div class="user__info">
+                      <h5 class="title title__5">Anna L.</h5>
+                      <time class="time" datetime="30 Nov 2019"
+                        >30 Nov 2023</time
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- =======================4=================== -->
+              <!-- <div class="slider">
+                <div class="img_cont_n">
+                  <img
+                    class="img"
+                    src="./assets/img/espresso-cup-and-beans.jpg"
+                    alt="Cup of espresso surrounded by coffee beans"
+                  />
+                </div>
+                <div class="new_info">
+                  <h3 class="title title__3">
+                    The Morning Ritual: Brewing Happiness
+                  </h3>
+                  <p class="text">
+                    For many, the first sip of coffee marks the true start of
+                    the day. Discover how to make your morning cup mindful and
+                    full of joy.
+                  </p>
+                  <div class="user">
+                    <img
+                      class="user__img"
+                      src="./assets/img/users/user4.png"
+                      alt="user"
+                    />
+                    <h5 class="title title__5">Oleh Petrenko</h5>
+                    <time class="time" datetime="30 Nov 2019"
+                      >05 Feb 20253</time
+                    >
+                  </div>
+                </div>
+              </div> -->
+              <!-- ======================5===================== -->
+              <!-- <div class="slider">
+                <div class="img_cont_n">
+                  <img
+                    class="img"
+                    src="./assets/img/coffee-cherries-hand.jpg"
+                    alt="Hand holding fresh coffee cherries"
+                  />
+                </div>
+                <div class="new_info">
+                  <h3 class="title title__3">
+                    Latte Art: Crafting Beauty in Every Cup
+                  </h3>
+                  <p class="text">
+                    Latte art is not just a trend — it’s a sign of balance
+                    between milk and espresso. Here’s how baristas turn simple
+                    foam into visual poetry.
+                  </p>
+                  <div class="user">
+                    <img
+                      class="user__img"
+                      src="./assets/img/users/user5.png"
+                      alt="user"
+                    />
+                    <h5 class="title title__5">Marco Rossi</h5>
+                    <time class="time" datetime="30 Nov 2019">12 Jan 2025</time>
+                  </div>
+                </div>
+              </div> -->
+              <!-- ======================6=================== -->
+              <!-- <div class="slider">
+                <div class="img_cont_n">
+                  <img
+                    class="img"
+                    src="./assets/img/coffee-roasting-machine.jpg"
+                    alt="Professional coffee roasting machine"
+                  />
+                </div>
+                <div class="new_info">
+                  <h3 class="title title__3">
+                    From Farm to Cup: The Journey of a Bean
+                  </h3>
+                  <p class="text">
+                    Every cup tells a story — from the hands that pick the
+                    cherries to the barista who pulls the perfect shot. Learn
+                    where your coffee begins.
+                  </p>
+                  <div class="user">
+                    <img
+                      class="user__img"
+                      src="./assets/img/users/user6.png"
+                      alt="user"
+                    />
+                    <h5 class="title title__5">Lina Moroz</h5>
+                    <time class="time" datetime="30 Nov 2019">02 Mar 2025</time>
+                  </div>
+                </div>
+              </div> -->
+              <!-- =========================7=================== -->
+              <!-- <div class="slider">
+                <div class="img_cont_n">
+                  <img
+                    class="img"
+                    src="./assets/img/espresso-shot-glass.jpg"
+                    alt="Espresso shot in a glass cup"
+                  />
+                </div>
+                <div class="new_info">
+                  <h3 class="title title__3">
+                    Cold Brew Season: Smooth & Refreshing
+                  </h3>
+                  <p class="text">
+                    Slow-steeped for 12 hours, cold brew captures the sweetness
+                    of the bean without bitterness. Perfect for long summer
+                    afternoons.
+                  </p>
+                  <div class="user">
+                    <img
+                      class="user__img"
+                      src="./assets/img/users/user7.png"
+                      alt="user"
+                    />
+                    <h5 class="title title__5">Taras Bondar</h5>
+                    <time class="time" datetime="30 Nov 2019">25 Apr 2025</time>
+                  </div>
+                </div>
+              </div> -->
+              <!-- =========================8================= -->
+
+              <!-- <div class="slider">
+                  <div class="img_cont_n">
+                    <img
+                      class="img"
+                      src="./assets/img/coffee-plantation-branches.jpg"
+                      alt="Coffee plant branches with ripe cherries"
+                    />
+                  </div>
+                  <div class="new_info">
+                    <h3 class="title title__3">
+                      The Science of Espresso Pressure
+                    </h3>
+                    <p class="text">
+                      Perfect extraction happens at 9 bars of pressure — but why?
+                      Dive into the physics behind your favorite shot.
+                    </p>
+                    <div class="user">
+                      <img
+                        class="img_user"
+                        src="./assets/img/users/user8.jpg"
+                        alt="user"
+                      />
+                      <h5 class="title title__5">Dasha Sokil</h5>
+                      <time class="time" datetime="30 Nov 2019">08 May 2025</time>
+                    </div>
+                  </div>
+                </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- ========================    gallery     ================================= -->
 
-      <section class="section gallery" id="gallery"></section>
+      <section class="section section__4" id="gallery">
+        <div class="container">
+          <h2 class="title title__2 title_two">GALLERY</h2>
+          <div class="gallery__grid">
+            <img
+              class="gallery__item gallery__item--1"
+              src="./assets/img/barista-pouring-latte-art.jpg"
+              alt="Barista pouring milk to create latte art"
+            />
+            <img
+              class="gallery__item gallery__item--2"
+              src="./assets/img/coffee-grind-process-latte-art.jpg"
+              alt="Ground coffee and latte art preparation process"
+            />
+            <img
+              class="gallery__item gallery__item--3"
+              src="./assets/img/coffee-beans-and-grinder.jpg"
+              alt="Coffee grinder filled with roasted beans"
+            />
+            <img
+              class="gallery__item gallery__item--4"
+              src="./assets/img/coffee-latte-art-stirring.jpg"
+              alt="Person stirring latte art in a coffee cup"
+            />
+            <img
+              class="gallery__item gallery__item--5"
+              src="./assets/img/espresso-machine-shot.jpg"
+              alt="Espresso shot being made with a coffee machine"
+            />
+          </div>
+
+          <button class="btn gallery__btn" type="button">Discover More</button>
+        </div>
+      </section>
       <!-- ========================    contact     ================================= -->
 
-      <section class="section contact" id="contact"></section>
+      <section class="section section__5" id="contact">
+        <div class="container"></div>
+      </section>
     </main>
     <!-- ========================    FOOTER     ================================= -->
 
