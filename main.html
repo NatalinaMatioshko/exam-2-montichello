@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Montichello</title>
+    <title>Montichello Cofffee</title>
 
     <link
       rel="icon"
@@ -11,6 +11,8 @@
       href="./assets/img/favicon.png"
       sizes="32x32"
     />
+
+    <link rel="stylesheet" href="https://unpkg.com/atropos/css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -268,10 +270,12 @@
                       src="./assets/img/users/user4.png"
                       alt="user"
                     />
-                    <h5 class="title title__5">Oleh Petrenko</h5>
-                    <time class="time" datetime="30 Nov 2019"
-                      >05 Feb 20253</time
-                    >
+                    <div class="user__info">
+                      <h5 class="title title__5">Oleh Petrenko</h5>
+                      <time class="time" datetime="30 Nov 2019"
+                        >05 Feb 20253</time
+                      >
+                    </div>
                   </div>
                 </div>
               </div> -->
@@ -299,8 +303,12 @@
                       src="./assets/img/users/user5.png"
                       alt="user"
                     />
-                    <h5 class="title title__5">Marco Rossi</h5>
-                    <time class="time" datetime="30 Nov 2019">12 Jan 2025</time>
+                    <div class="user__info">
+                      <h5 class="title title__5">Marco Rossi</h5>
+                      <time class="time" datetime="30 Nov 2019"
+                        >12 Jan 2025</time
+                      >
+                    </div>
                   </div>
                 </div>
               </div> -->
@@ -328,8 +336,12 @@
                       src="./assets/img/users/user6.png"
                       alt="user"
                     />
-                    <h5 class="title title__5">Lina Moroz</h5>
-                    <time class="time" datetime="30 Nov 2019">02 Mar 2025</time>
+                    <div class="user__info">
+                      <h5 class="title title__5">Lina Moroz</h5>
+                      <time class="time" datetime="30 Nov 2019"
+                        >02 Mar 2025</time
+                      >
+                    </div>
                   </div>
                 </div>
               </div> -->
@@ -357,40 +369,48 @@
                       src="./assets/img/users/user7.png"
                       alt="user"
                     />
-                    <h5 class="title title__5">Taras Bondar</h5>
-                    <time class="time" datetime="30 Nov 2019">25 Apr 2025</time>
+                    <div class="user__info">
+                      <h5 class="title title__5">Taras Bondar</h5>
+                      <time class="time" datetime="30 Nov 2019"
+                        >25 Apr 2025</time
+                      >
+                    </div>
                   </div>
                 </div>
               </div> -->
               <!-- =========================8================= -->
 
               <!-- <div class="slider">
-                  <div class="img_cont_n">
+                <div class="img_cont_n">
+                  <img
+                    class="img"
+                    src="./assets/img/coffee-plantation-branches.jpg"
+                    alt="Coffee plant branches with ripe cherries"
+                  />
+                </div>
+                <div class="new_info">
+                  <h3 class="title title__3">
+                    The Science of Espresso Pressure
+                  </h3>
+                  <p class="text">
+                    Perfect extraction happens at 9 bars of pressure — but why?
+                    Dive into the physics behind your favorite shot.
+                  </p>
+                  <div class="user">
                     <img
-                      class="img"
-                      src="./assets/img/coffee-plantation-branches.jpg"
-                      alt="Coffee plant branches with ripe cherries"
+                      class="img_user"
+                      src="./assets/img/users/user8.jpg"
+                      alt="user"
                     />
-                  </div>
-                  <div class="new_info">
-                    <h3 class="title title__3">
-                      The Science of Espresso Pressure
-                    </h3>
-                    <p class="text">
-                      Perfect extraction happens at 9 bars of pressure — but why?
-                      Dive into the physics behind your favorite shot.
-                    </p>
-                    <div class="user">
-                      <img
-                        class="img_user"
-                        src="./assets/img/users/user8.jpg"
-                        alt="user"
-                      />
+                    <div class="user__info">
                       <h5 class="title title__5">Dasha Sokil</h5>
-                      <time class="time" datetime="30 Nov 2019">08 May 2025</time>
+                      <time class="time" datetime="30 Nov 2019"
+                        >08 May 2025</time
+                      >
                     </div>
                   </div>
-                </div> -->
+                </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -439,6 +459,58 @@
     </main>
     <!-- ========================    FOOTER     ================================= -->
 
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container footer__cont">
+        <div class="logo_cont">
+          <a class="nav_link" href="">
+            <img class="logo" src="./assets/svg/logo.svg" alt="logo" />
+          </a>
+          <small class="small">Copyrights © 2020 Montichello</small>
+        </div>
+        <div class="soc_cont">
+          <ul class="soc_menu">
+            <li class="soc_menu__item">
+              <a
+                class="soc_menu__link"
+                href="https://www.facebook.com/"
+                target="_blank"
+              >
+                <svg class="soc_menu__icon">
+                  <use href="./assets/svg/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc_menu__item">
+              <a
+                class="soc_menu__link"
+                href="https://www.twitter.com/"
+                target="_blank"
+              >
+                <svg class="soc_menu__icon">
+                  <use href="./assets/svg/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="soc_menu__item">
+              <a
+                class="soc_menu__link"
+                href="https://www.instagram.com/"
+                target="_blank"
+              >
+                <svg class="soc_menu__icon">
+                  <use href="./assets/svg/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://unpkg.com/atropos"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

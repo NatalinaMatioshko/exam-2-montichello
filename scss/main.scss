@@ -15,7 +15,7 @@
   border: 1px solid #000;
 }
 
-.section {
+.section:not(:first-of-type) {
   max-width: 1600px;
   margin: 0 auto;
   margin-top: 150px;
@@ -40,7 +40,7 @@
       font-family: "Source Sans Pro", sans-serif;
       font-weight: 400;
       font-size: 14px;
-      color: #fff;
+      color: v.$second-color;
       text-transform: uppercase;
       letter-spacing: 0.1em;
       padding-left: 25px;
@@ -53,13 +53,13 @@
         transform: translateY(-50%);
         width: 10px;
         height: 10px;
-        border: 1px solid #fff;
+        border: 1px solid (v.$second-color);
         border-radius: 50%;
         opacity: 0.5;
         transition: all 0.3s ease;
       }
       &:hover::before {
-        background-color: #fff;
+        background-color: v.$second-color;
         opacity: 1;
       }
     }
@@ -84,15 +84,15 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    border: 1px solid #fff;
+    border: 1px solid (v.$second-color);
     border-radius: 50%;
     transition: background 0.3s ease, transform 0.2s ease;
 
     &:hover {
-      background: #fff;
+      background: v.$second-color;
       transform: scale(1.1);
       .soc_menu__icon {
-        fill: #2c4058;
+        fill: v.$main-color;
       }
     }
   }
@@ -100,11 +100,11 @@
   &__icon {
     width: 18px;
     height: 18px;
-    fill: #fff;
+    fill: v.$second-color;
   }
 }
 
-// <!-- ================    TITLES / TEXT   ======================== -->
+// <!-- ================    TITLES    ======================== -->
 
 .title {
   @extend %title-base;
@@ -142,7 +142,7 @@
   color: v.$main-color;
 }
 
-// <!-- ========================    PROJECTS     ================================= -->
+// <!-- =====================    PROJECTS     ========================= -->
 
 .project {
   display: flex;
@@ -202,7 +202,7 @@
   font-style: italic;
   font-weight: 400;
   font-size: 15px;
-  color: #000;
+  color: v.$third-color;
   padding-left: 25px;
   margin-top: 40px;
 
@@ -249,23 +249,17 @@
   &::before {
     top: 110px;
     left: 70px;
-    background-color: #55b7ff;
+    background-color: #cd853f;
   }
 
   &::after {
     top: 750px;
     right: 70px;
-    background-color: #7e5aff;
+    background-color: #a0522d;
   }
 }
 
-// =============button=============
-
-.btn {
-  @extend %btn-base;
-}
-
-// =============news=============
+// =============NEWS=============
 .section__3 {
   position: relative;
   background: url("../assets/img/bg.jpg") no-repeat center center/cover;
@@ -360,8 +354,6 @@
   width: 370px;
   height: 240px;
 }
-.user
-
 // =============     gallery =============
 
 .gallery__btn {
@@ -436,23 +428,56 @@
     grid-template-columns: 1fr;
   }
 }
-// .gallery__btn {
-//   display: inline-block;
-//   padding: 12px 34px;
-//   font-family: "Montserrat", sans-serif;
-//   font-weight: 500;
-//   font-size: 15px;
-//   color: #4b2e1e;
-//   background: transparent;
-//   border: 2px solid #4b2e1e;
-//   border-radius: 10px;
-//   letter-spacing: 0.05em;
-//   transition: all 0.3s ease;
-//   cursor: pointer;
+// =========================== FOOTER  =========================
 
-//   &:hover {
-//     background-color: #4b2e1e;
-//     color: #f4e1c1;
-//     box-shadow: 0 4px 12px rgba(75, 46, 30, 0.4);
-//   }
-// }
+//  data-speed="0.10">
+// " data-speed="0.40">
+// " data-speed="-0.20">
+
+.footer {
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  background: url("../assets/img/bg_foo.jpg") center/cover no-repeat fixed;
+  // text-align: center;
+  overflow: hidden;
+  // padding: 120px 0;
+  padding-top: 203px;
+  padding-bottom: 234px;
+
+  // темне напівпрозоре накриття як у Coffee Journal
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.7)
+    );
+    z-index: 1;
+  }
+
+  .footer__cont {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    @include m.flex(space-around, flex-start);
+  }
+
+  .small {
+    margin-top: 41px;
+    font-family: v.$font-primary;
+    font-weight: v.$main-font-weight;
+    font-size: v.$third-font-size;
+    color: v.$second-color;
+
+    display: block;
+    opacity: 0.85;
+  }
+}
+// =============button=============
+
+.btn {
+  @extend %btn-base;
+}
