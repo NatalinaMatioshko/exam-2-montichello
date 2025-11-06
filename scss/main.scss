@@ -1,3 +1,4 @@
+@use "./slider";
 @use "./vars" as v;
 @use "./mixins" as m;
 @use "./extends";
@@ -6,7 +7,6 @@
 @use "./common";
 
 .container {
-  border: 1px solid #fff;
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
@@ -15,12 +15,27 @@
   border: 1px solid #000;
 }
 
-.section:not(:first-of-type) {
-  max-width: 1600px;
+.section {
+  min-height: 800px;
   margin: 0 auto;
-  margin-top: 150px;
+
+  &:not(:first-of-type) {
+    margin-top: 150px;
+  }
+  &__3 {
+    min-height: 978px;
+  }
+  &__5 {
+    min-height: 700px;
+  }
 }
 
+// ===========HEADER===============================
+.header {
+  position: fixed;
+  z-index: 7;
+  width: 100%;
+}
 // ==================NAV===============================
 
 .nav {
@@ -109,15 +124,17 @@
 .title {
   @extend %title-base;
   font-size: v.$main-font-size;
-  font-weight: v.$second-font-weight;
-
+  align-items: flex-start;
+  text-align: left;
   &__1 {
-    @include m.title(
-      (v.$main-font-size),
-      (v.$second-font-weight),
-      (v.$main-color),
-      center
-    );
+    letter-spacing: 0.1em;
+    min-width: 1400px;
+
+    @include m.title(80px, (v.$second-font-weight), (v.$second-color), center);
+
+    @media screen and (max-width: 920px) {
+      font-size: v.$main-font-size;
+    }
   }
   &__3 {
     @include m.title((v.$fourth-font-size), (v.$second-font-weight));
@@ -130,12 +147,14 @@
   &__5 {
     @include m.title((v.$second-font-size), (v.$main-font-weight));
   }
+  @media screen and (max-width: 920px) {
+  }
 }
 
 // ==================// TEXT  // =============
 
 .text {
-  font-family: v.$font-secondary, sans-serif;
+  font-family: v.$font-secondary;
   font-weight: v.$main-font-weight;
   font-size: v.$second-font-size;
   line-height: 1.67;
@@ -152,39 +171,46 @@
 .project__info {
   position: relative;
   overflow: visible;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  // gap: 60px;
-  flex-wrap: wrap;
+
+  @include m.flex(space-between, flex-start);
+
+  gap: 60px;
   min-height: 527px;
 
   &:not(:first-of-type) {
     margin-top: 120px;
   }
 }
-.project__info:nth-child(even)::before {
-  right: auto;
-  left: -70px;
-}
+
 .project__info:nth-child(odd) {
   flex-direction: row-reverse;
 }
+.project__info {
+  @media screen and (max-width: 1200px) {
+    max-width: 630px;
+    max-height: 470px;
+    flex-direction: column;
+  }
+}
 .info_card {
   flex: 1;
-  // max-width: 470px;
-  // padding-top: 81px;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
+  text-align: left;
   gap: 20px;
 }
 .img_container {
   flex: 1;
-  max-width: 630px;
+  width: 630px;
+  height: 470px;
   position: relative;
   overflow: hidden;
+  @media screen and (max-width: 1200px) {
+    max-width: 630px;
+    max-height: 470px;
+  }
 }
 .proj_img {
   flex: 1;
@@ -198,9 +224,9 @@
 .project__location {
   position: relative;
   display: inline-block;
-  font-family: "Open Sans", sans-serif;
+  font-family: v.$font-secondary;
   font-style: italic;
-  font-weight: 400;
+  font-weight: v.$main-font-weight;
   font-size: 15px;
   color: v.$third-color;
   padding-left: 25px;
@@ -241,32 +267,39 @@
     content: "";
     position: absolute;
     width: 585px;
-    height: 400px;
+    height: 470px;
     z-index: 0;
     border-radius: 2px;
+    @media screen and (max-width: 1300px) {
+      max-width: 585px;
+      max-height: 470px;
+    }
   }
 
   &::before {
     top: 110px;
-    left: 70px;
+    left: 0;
     background-color: #cd853f;
   }
 
   &::after {
     top: 750px;
-    right: 70px;
+    right: 0;
     background-color: #a0522d;
   }
+}
+.btn {
+  @extend %btn-base;
 }
 
 // =============NEWS=============
 .section__3 {
   position: relative;
   background: url("../assets/img/bg.jpg") no-repeat center center/cover;
-  background-attachment: fixed; // створює ефект паралаксу
+  background-attachment: fixed; 
   padding: 120px 0;
   color: #fff;
-  // затемнення поверх картинки
+
   &::before {
     content: "";
     position: absolute;
@@ -277,7 +310,7 @@
 
   .container {
     position: relative;
-    z-index: 2; // щоб контент був над затемненням
+    z-index: 2; 
   }
 }
 
@@ -327,8 +360,7 @@
 }
 .title_two {
   position: relative;
-  // display: inline-block;
-  // margin: 0 auto;
+
   text-align: center;
   margin-bottom: 90px;
 
@@ -356,18 +388,9 @@
 }
 // =============     gallery =============
 
-.gallery__btn {
-  margin: 0 auto;
-}
-
-.gallery__btn {
-  display: block;
-  margin: 50px 0;
-}
-
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); // тепер 4 колонки
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 214px);
   gap: 10px;
 
@@ -383,13 +406,12 @@
     }
   }
 
-  // перше зображення — велике (2x2)
   .gallery__item--1 {
-    grid-column: 1 / 3; // займає 1-2 колонки
-    grid-row: 1 / 3; // займає 1-2 рядки
+    grid-column: 1 / 3; 
+    grid-row: 1 / 3;
   }
 
-  // решта зображень розташовані справа
+ 
   .gallery__item--2 {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
@@ -428,24 +450,29 @@
     grid-template-columns: 1fr;
   }
 }
+
+.gallery__btn {
+  display: block;
+  margin: 60px auto;
+}
+
+// =========MAP===================
+#map {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 // =========================== FOOTER  =========================
 
-//  data-speed="0.10">
-// " data-speed="0.40">
-// " data-speed="-0.20">
-
 .footer {
-  max-width: 1600px;
   margin: 0 auto;
   position: relative;
   background: url("../assets/img/bg_foo.jpg") center/cover no-repeat fixed;
-  // text-align: center;
   overflow: hidden;
-  // padding: 120px 0;
   padding-top: 203px;
   padding-bottom: 234px;
 
-  // темне напівпрозоре накриття як у Coffee Journal
   &::before {
     content: "";
     position: absolute;
@@ -476,8 +503,107 @@
     opacity: 0.85;
   }
 }
-// =============button=============
+// =============form=============
 
-.btn {
-  @extend %btn-base;
+
+.contact {
+  max-width: 770px;
+  max-height: 450px;
+  background: #fff;
+  border: 1px solid #000;
+  background-image: url("../assets/img/background-form.png");
+}
+.contact .title_two {
+  margin: 0;
+  margin-top: 80px;
+}
+.contact__container {
+  margin-top: 42px;
+  margin-bottom: 68px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.info_form {
+  margin-left: 60px;
+}
+
+.form_cont {
+  @include m.flex(space-between);
+  gap: 54px;
+}
+
+.form_menu {
+  @include m.flex(space-between, flex-start);
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1f2c4b;
+  }
+  &__link {
+    font-family: v.$font-primary;
+    color: v.$main-color;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #9c2007;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: #9c2007;
+    flex-shrink: 0;
+    margin-right: 10px;
+  }
+
+  &__item &__link {
+    @include m.flex(space-between, center);
+  }
+}
+.form {
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 310px;
+  overflow: hidden;
+
+  box-shadow: #432d24;
+}
+.input {
+  font-family: v.$font-primary;
+  width: 310px;
+  height: 0px;
+  border: none;
+  border-bottom: 1px solid (v.$main-color);
+  padding: 14px 0;
+
+  &:not(:first-of-type) {
+    opacity: 0.2;
+  }
+  &::placeholder {
+    color: v.$main-color;
+    font-size: 18px;
+    font-weight: 400;
+
+    opacity: 1;
+    line-height: 1.5;
+  }
+}
+.input:not(:first-of-type) {
+  &::placeholder {
+    color: v.$main-color;
+    opacity: 0.8;
+  }
+}
+
+.foo_btn {
+  width: 140px;
+  margin-right: 0;
 }

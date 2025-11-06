@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Montichello Cofffee</title>
+    <title>Montichello Coffee</title>
 
     <link
       rel="icon"
       type="image/png"
       href="./assets/img/favicon.png"
       sizes="32x32"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
 
     <link rel="stylesheet" href="https://unpkg.com/atropos/css" />
@@ -79,7 +84,116 @@
 
     <main>
       <!-- ==================    HERO     ======================== -->
-      <section class="section section__1"></section>
+
+      <section class="section section__1 hero__slider">
+        <!-- ==================    1     ======================== -->
+
+        <div class="hero__slider-slide">
+          <div class="hero__slider__content sl-content">
+            <h2 class="sl-content__title title__1">THE ART OF COFFEE</h2>
+            <h4 class="sl-content__subtitle">
+              From bean to cup — experience the craft of true espresso
+              perfection.
+            </h4>
+          </div>
+
+          <img
+            class="hero__slider-slide__img"
+            src="./assets/img/espresso-brew-dark-background.jpg"
+            alt="Espresso brewing closeup on dark background"
+          />
+          <div class="btn">
+            <button>
+              <svg class="arrow_down">
+                <use href="./assets/svg/sprite.svg#down_arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- ==================    2     ======================== -->
+
+        <div class="hero__slider-slide">
+          <div class="hero__slider__content sl-content">
+            <h2 class="sl-content__title title__1">BREWED WITH PASSION</h2>
+            <h4 class="sl-content__subtitle">
+              Every pour tells a story — aroma, warmth, and pure inspiration.
+            </h4>
+          </div>
+
+          <img
+            class="hero__slider-slide__img"
+            src="./assets/img/coffee-beans-burlap-bag.jpg"
+            alt="Coffee beans in a burlap bag"
+          />
+        </div>
+        <!-- ==================    3   ======================== -->
+
+        <div class="hero__slider-slide">
+          <div class="hero__slider__content sl-content">
+            <h2 class="sl-content__title title__1">COFFEE IS OUR LANGUAGE</h2>
+            <h4 class="sl-content__subtitle">
+              We speak through taste, aroma, and connection — one cup at a time.
+            </h4>
+          </div>
+
+          <img
+            class="hero__slider-slide__img"
+            src="./assets/img/espresso.jpg"
+            alt="Flat white coffee on outdoor table in sunlight"
+          />
+        </div>
+        <!-- ==================    4   ======================== -->
+
+        <div class="hero__slider-slide">
+          <div class="hero__slider__content sl-content">
+            <h2 class="sl-content__title title__1">FRESHLY ROASTED</h2>
+            <h4 class="sl-content__subtitle">
+              Each bean tells a story — rich aroma, deep flavor, and endless
+              warmth.
+            </h4>
+          </div>
+
+          <img
+            class="hero__slider-slide__img"
+            src="./assets/img/fresh-roasted-coffee-beans.jpg"
+            alt="Freshly roasted coffee beans in container"
+          />
+        </div>
+        <!-- ==================    5    ======================== -->
+
+        <div class="hero__slider-slide">
+          <div class="hero__slider__content sl-content">
+            <h2 class="sl-content__title title__1">GRIND WITH CARE</h2>
+            <h4 class="sl-content__subtitle">
+              Perfect grind, perfect brew — precision that brings out every
+              note.
+            </h4>
+          </div>
+
+          <img
+            class="hero__slider-slide__img"
+            src="./assets/img/manual-coffee-grinder-closeup.jpg"
+            alt="Closeup of a manual coffee grinder with beans"
+          />
+        </div>
+        <!-- ==================    6     ======================== -->
+
+        <div class="hero__slider-slide">
+          <div class="hero__slider__content sl-content">
+            <h2 class="sl-content__title title__1">FROM BEANS TO BREW</h2>
+            <h4 class="sl-content__subtitle">
+              The journey from whole beans to the perfect shot — crafted with
+              passion.
+            </h4>
+          </div>
+
+          <img
+            class="hero__slider-slide__img"
+            src="./assets/img/coffee-beans-burlap-bag.jpg"
+            alt="Portafilters with whole and ground coffee beans"
+          />
+        </div>
+      </section>
 
       <!-- ========================    PROJECTS     ================================= -->
 
@@ -152,7 +266,7 @@
             <h2 class="title title_two">Coffee Journal</h2>
 
             <div class="slider_cont">
-              <!-- ====================1====================== -->
+              <!-- ===============1====================== -->
 
               <div class="slider">
                 <img
@@ -182,7 +296,7 @@
                   </div>
                 </div>
               </div>
-              <!-- ===================2======================= -->
+              <!-- ===============2======================= -->
 
               <div class="slider">
                 <img
@@ -214,7 +328,7 @@
                   </div>
                 </div>
               </div>
-              <!-- ====================3===================== -->
+              <!-- ====================3===================-->
               <div class="slider">
                 <img
                   class="img"
@@ -245,16 +359,15 @@
                   </div>
                 </div>
               </div>
-
               <!-- =======================4=================== -->
-              <!-- <div class="slider">
-                <div class="img_cont_n">
-                  <img
-                    class="img"
-                    src="./assets/img/espresso-cup-and-beans.jpg"
-                    alt="Cup of espresso surrounded by coffee beans"
-                  />
-                </div>
+
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/espresso-cup-and-beans.jpg"
+                  alt="Cup of espresso surrounded by coffee beans"
+                />
+
                 <div class="new_info">
                   <h3 class="title title__3">
                     The Morning Ritual: Brewing Happiness
@@ -273,21 +386,20 @@
                     <div class="user__info">
                       <h5 class="title title__5">Oleh Petrenko</h5>
                       <time class="time" datetime="30 Nov 2019"
-                        >05 Feb 20253</time
+                        >05 Feb 2025</time
                       >
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <!-- ======================5===================== -->
-              <!-- <div class="slider">
-                <div class="img_cont_n">
-                  <img
-                    class="img"
-                    src="./assets/img/coffee-cherries-hand.jpg"
-                    alt="Hand holding fresh coffee cherries"
-                  />
-                </div>
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/coffee-cherries-hand.jpg"
+                  alt="Hand holding fresh coffee cherries"
+                />
+
                 <div class="new_info">
                   <h3 class="title title__3">
                     Latte Art: Crafting Beauty in Every Cup
@@ -311,16 +423,15 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <!-- ======================6=================== -->
-              <!-- <div class="slider">
-                <div class="img_cont_n">
-                  <img
-                    class="img"
-                    src="./assets/img/coffee-roasting-machine.jpg"
-                    alt="Professional coffee roasting machine"
-                  />
-                </div>
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/coffee-roasting-machine.jpg"
+                  alt="Professional coffee roasting machine"
+                />
+
                 <div class="new_info">
                   <h3 class="title title__3">
                     From Farm to Cup: The Journey of a Bean
@@ -344,16 +455,16 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <!-- =========================7=================== -->
-              <!-- <div class="slider">
-                <div class="img_cont_n">
-                  <img
-                    class="img"
-                    src="./assets/img/espresso-shot-glass.jpg"
-                    alt="Espresso shot in a glass cup"
-                  />
-                </div>
+
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/espresso-shot-glass.jpg"
+                  alt="Espresso shot in a glass cup"
+                />
+
                 <div class="new_info">
                   <h3 class="title title__3">
                     Cold Brew Season: Smooth & Refreshing
@@ -377,17 +488,15 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
               <!-- =========================8================= -->
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/coffee-plantation-branches.jpg"
+                  alt="Coffee plant branches with ripe cherries"
+                />
 
-              <!-- <div class="slider">
-                <div class="img_cont_n">
-                  <img
-                    class="img"
-                    src="./assets/img/coffee-plantation-branches.jpg"
-                    alt="Coffee plant branches with ripe cherries"
-                  />
-                </div>
                 <div class="new_info">
                   <h3 class="title title__3">
                     The Science of Espresso Pressure
@@ -398,7 +507,7 @@
                   </p>
                   <div class="user">
                     <img
-                      class="img_user"
+                      class="user__img"
                       src="./assets/img/users/user8.jpg"
                       alt="user"
                     />
@@ -410,7 +519,38 @@
                     </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
+              <!-- =========================9================= -->
+              <div class="slider">
+                <img
+                  class="img"
+                  src="./assets/img/flat-white-outdoor-table.jpg"
+                  alt="Coffee plant branches with ripe cherries"
+                />
+
+                <div class="new_info">
+                  <h3 class="title title__3">
+                    The Science of Espresso Pressure
+                  </h3>
+                  <p class="text">
+                    Perfect extraction happens at 9 bars of pressure — but why?
+                    Dive into the physics behind your favorite shot.
+                  </p>
+                  <div class="user">
+                    <img
+                      class="user__img"
+                      src="./assets/img/users/user4.png"
+                      alt="user"
+                    />
+                    <div class="user__info">
+                      <h5 class="title title__5">Dasha Sokil</h5>
+                      <time class="time" datetime="30 Nov 2019"
+                        >08 May 2025</time
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -418,7 +558,7 @@
       <!-- ========================    gallery     ================================= -->
 
       <section class="section section__4" id="gallery">
-        <div class="container">
+        <div class="container gallery__cont">
           <h2 class="title title__2 title_two">GALLERY</h2>
           <div class="gallery__grid">
             <img
@@ -453,8 +593,72 @@
       </section>
       <!-- ========================    contact     ================================= -->
 
-      <section class="section section__5" id="contact">
-        <div class="container"></div>
+      <section class="section section__5" id="map"></section>
+      <section class="section section__5">
+        <div class="container contact">
+          <h2 class="title title__2 title_two">GET IN TOUCH</h2>
+          <div class="contact__container">
+            <div class="info_form">
+              <ul class="form_menu">
+                <li class="form_menu__item">
+                  <a
+                    class="form_menu__link"
+                    href="https://www.google.com/maps?q=91+Nolan+Extensions+Suite+670"
+                    target="_blank"
+                  >
+                    <svg class="form_menu__icon">
+                      <use href="./assets/svg/sprite.svg#location"></use>
+                    </svg>
+                    91 Nolan Extensions Suite 670</a
+                  >
+                </li>
+                <li class="form_menu__item">
+                  <a class="form_menu__link" href="tel:+0013568682454">
+                    <svg class="form_menu__icon">
+                      <use href="./assets/svg/sprite.svg#phone"></use>
+                    </svg>
+                    +001 356-868-2454
+                  </a>
+                </li>
+                <li class="form_menu__item">
+                  <a
+                    class="form_menu__link"
+                    href="mailto:montichello@service.com"
+                  >
+                    <svg class="form_menu__icon">
+                      <use href="./assets/svg/sprite.svg#inbox"></use>
+                    </svg>
+                    montichello@service.com
+                  </a>
+                </li>
+                <li class="form_menu__item">
+                  <a class="form_menu__link" href="">
+                    <svg class="form_menu__icon">
+                      <use href="./assets/svg/sprite.svg#clock"></use>
+                    </svg>
+                    <time datetime="07:05">From 07:05AM to 19: 30PM</time>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <form class="form">
+              <input
+                class="input"
+                type="text"
+                name="name"
+                placeholder="Mollie Medina"
+              />
+              <input
+                class="input"
+                type="email"
+                name="mail"
+                placeholder="Email"
+              />
+              <button class="btn foo_btn" type="submit">SUBMIT</button>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
     <!-- ========================    FOOTER     ================================= -->
@@ -507,9 +711,19 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
 
     <script src="https://unpkg.com/atropos"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"
+    ></script>
+    <script src="./js/map.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/main.js"></script>
   </body>

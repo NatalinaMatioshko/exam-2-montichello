@@ -10,11 +10,10 @@
 
 html,
 body {
+  position: relative;
   padding: 0;
   margin: 0;
   font-family: v.$font-primary;
-  // background-color: #3e3a33;
-  background-color: aquamarine;
   min-height: 100dvh;
 }
 
