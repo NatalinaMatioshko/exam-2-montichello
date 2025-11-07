@@ -204,6 +204,7 @@
 }
 .info_card {
   flex: 1;
+
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -305,10 +306,9 @@
 .section__3 {
   position: relative;
   background: url("../assets/img/bg.jpg") no-repeat center center/cover;
-  background-attachment: fixed;
+  background-attachment: fixed; 
   padding: 120px 0;
   color: #fff;
-
   &::before {
     content: "";
     position: absolute;
@@ -319,7 +319,7 @@
 
   .container {
     position: relative;
-    z-index: 2;
+    z-index: 2; 
   }
 }
 
@@ -401,6 +401,13 @@
   width: 370px;
   height: 240px;
 }
+// =============     gallery =============
+
+
+.gallery__btn {
+  display: block;
+  margin: 60px auto;
+}
 
 // =========MAP===================
 #map {
@@ -410,6 +417,8 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 // =========================== FOOTER  =========================
+
+
 
 .footer {
   margin: 0 auto;
@@ -457,15 +466,11 @@
   z-index: 112;
   position: absolute;
   top: -200px;
-  // top: -400px;
   min-width: 770px;
   max-height: 450px;
   background: #fff;
   border: 1px solid #000;
-  // background-image: url("../assets/img/background-form.png");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center;
+
 }
 .contact .title_two {
   margin: 0;
@@ -483,6 +488,7 @@
   margin-left: 60px;
 }
 
+
 .form_menu {
   @include m.flex;
   align-items: flex-start;
@@ -490,6 +496,7 @@
   text-align: center;
   gap: 30px;
   &__item {
+
     gap: 12px;
     color: #1f2c4b;
   }
@@ -555,10 +562,11 @@
 }
 input:focus {
   outline: none;
-  border-color: inherit;
+  border-color: inherit; 
   color: v.$main-color;
   opacity: 1;
 }
+
 
 .foo_btn {
   width: 140px;
@@ -604,12 +612,6 @@ input:focus {
   }
 }
 // ===========ATROPOS========
-// =============     gallery =============
-
-.gallery__btn {
-  display: block;
-  margin: 60px auto;
-}
 
 .gallery__grid {
   display: grid;
@@ -638,7 +640,7 @@ input:focus {
   }
 
   .gallery__item--1 {
-    grid-column: 1 / 3;
+    grid-column: 1 / 3; 
     grid-row: 1 / 3;
   }
 
@@ -678,5 +680,22 @@ input:focus {
 @media (max-width: 600px) {
   .gallery__grid {
     grid-template-columns: 1fr;
+  }
+}
+.gallery__item--1 {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    background: url("../assets/svg/magnifying-glass.svg") no-repeat center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    pointer-events: none; 
+    opacity: 0.5;
   }
 }

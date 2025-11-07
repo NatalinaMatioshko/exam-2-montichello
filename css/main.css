@@ -635,6 +635,11 @@ img {
   height: 240px;
 }
 
+.gallery__btn {
+  display: block;
+  margin: 60px auto;
+}
+
 #map {
   width: 100%;
   height: 500px;
@@ -826,11 +831,6 @@ input:focus {
     transform: translateX(0);
   }
 }
-.gallery__btn {
-  display: block;
-  margin: 60px auto;
-}
-
 .gallery__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -889,4 +889,20 @@ input:focus {
   .gallery__grid {
     grid-template-columns: 1fr;
   }
+}
+.gallery__item--1 {
+  position: relative;
+}
+.gallery__item--1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70px;
+  height: 70px;
+  background: url("../assets/svg/magnifying-glass.svg") no-repeat center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0.5;
 }/*# sourceMappingURL=main.css.map */
