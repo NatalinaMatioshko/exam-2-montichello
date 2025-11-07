@@ -16,8 +16,11 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/atropos@2.0.2/atropos.min.css"
+    />
 
-    <link rel="stylesheet" href="https://unpkg.com/atropos/css" />
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -556,32 +559,107 @@
       <section class="section section__4" id="gallery">
         <div class="container gallery__cont">
           <h2 class="title title__2 title_two">GALLERY</h2>
+
           <div class="gallery__grid">
-            <img
-              class="gallery__item gallery__item--1"
-              src="./assets/img/barista-pouring-latte-art.jpg"
-              alt="Barista pouring milk to create latte art"
-            />
-            <img
-              class="gallery__item gallery__item--2"
-              src="./assets/img/coffee-grind-process-latte-art.jpg"
-              alt="Ground coffee and latte art preparation process"
-            />
-            <img
-              class="gallery__item gallery__item--3"
-              src="./assets/img/coffee-beans-and-grinder.jpg"
-              alt="Coffee grinder filled with roasted beans"
-            />
-            <img
-              class="gallery__item gallery__item--4"
-              src="./assets/img/coffee-latte-art-stirring.jpg"
-              alt="Person stirring latte art in a coffee cup"
-            />
-            <img
-              class="gallery__item gallery__item--5"
-              src="./assets/img/espresso-machine-shot.jpg"
-              alt="Espresso shot being made with a coffee machine"
-            />
+            <!-- 1 -->
+            <div class="atropos my-atropos gallery__item gallery__item--1">
+              <div class="atropos-scale">
+                <div class="atropos-rotate">
+                  <div class="atropos-inner">
+                    <img
+                      class="gallery__img"
+                      src="./assets/img/barista-pouring-latte-art.jpg"
+                      alt="Barista pouring milk to create latte art"
+                      data-atropos-offset="5"
+                    />
+                    <div class="gallery__overlay" data-atropos-offset="8"></div>
+                    <h3 class="gallery__caption" data-atropos-offset="12">
+                      Latte Art
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="atropos my-atropos gallery__item gallery__item--2">
+              <div class="atropos-scale">
+                <div class="atropos-rotate">
+                  <div class="atropos-inner">
+                    <img
+                      class="gallery__img"
+                      src="./assets/img/coffee-grind-process-latte-art.jpg"
+                      alt="Ground coffee and latte art preparation process"
+                      data-atropos-offset="5"
+                    />
+                    <div class="gallery__overlay" data-atropos-offset="8"></div>
+                    <h3 class="gallery__caption" data-atropos-offset="12">
+                      Brewing
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="atropos my-atropos gallery__item gallery__item--3">
+              <div class="atropos-scale">
+                <div class="atropos-rotate">
+                  <div class="atropos-inner">
+                    <img
+                      class="gallery__img"
+                      src="./assets/img/coffee-beans-and-grinder.jpg"
+                      alt="Coffee grinder filled with roasted beans"
+                      data-atropos-offset="6"
+                    />
+                    <div class="gallery__overlay" data-atropos-offset="8"></div>
+                    <h3 class="gallery__caption" data-atropos-offset="12">
+                      Roasted Beans
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="atropos my-atropos gallery__item gallery__item--4">
+              <div class="atropos-scale">
+                <div class="atropos-rotate">
+                  <div class="atropos-inner">
+                    <img
+                      class="gallery__img"
+                      src="./assets/img/coffee-latte-art-stirring.jpg"
+                      alt="Person stirring latte art in a coffee cup"
+                      data-atropos-offset="6"
+                    />
+                    <div class="gallery__overlay" data-atropos-offset="8"></div>
+                    <h3 class="gallery__caption" data-atropos-offset="12">
+                      Art in Motion
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="atropos my-atropos gallery__item gallery__item--5">
+              <div class="atropos-scale">
+                <div class="atropos-rotate">
+                  <div class="atropos-inner">
+                    <img
+                      class="gallery__img"
+                      src="./assets/img/espresso-machine-shot.jpg"
+                      alt="Espresso shot being made with a coffee machine"
+                      data-atropos-offset="6"
+                    />
+                    <div class="gallery__overlay" data-atropos-offset="8"></div>
+                    <h3 class="gallery__caption" data-atropos-offset="12">
+                      Espresso
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <button class="btn gallery__btn" type="button">Discover More</button>
@@ -773,13 +851,11 @@
       </div>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
     <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-
-    <script src="https://unpkg.com/atropos"></script>
+    <script src="https://unpkg.com/atropos@2.0.2/atropos.min.js"></script>
     <script
       async
       defer
@@ -787,6 +863,7 @@
     ></script>
     <script src="./js/map.js"></script>
     <script src="./js/slider.js"></script>
+    <script src="./js/atropos.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

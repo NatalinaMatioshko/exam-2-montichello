@@ -28,12 +28,7 @@
 }
 
 // ===========HEADER===============================
-// .header {
-//   position: fixed;
-//   z-index: 7;
-//   width: 100%;
-// }
-/* SCSS для плавного ефекту */
+
 .header {
   position: fixed;
   top: 0;
@@ -190,17 +185,13 @@
   @include m.flex(space-between, flex-start);
 
   gap: 60px;
-  // flex-wrap: wrap;
   min-height: 527px;
 
   &:not(:first-of-type) {
     margin-top: 120px;
   }
 }
-// .project__info:nth-child(even)::before {
-//   right: auto;
-//   left: -70px;
-// }
+
 .project__info:nth-child(odd) {
   flex-direction: row-reverse;
 }
@@ -213,8 +204,6 @@
 }
 .info_card {
   flex: 1;
-  // max-width: 470px;
-  // padding-top: 81px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -316,10 +305,10 @@
 .section__3 {
   position: relative;
   background: url("../assets/img/bg.jpg") no-repeat center center/cover;
-  background-attachment: fixed; // створює ефект паралаксу
+  background-attachment: fixed;
   padding: 120px 0;
   color: #fff;
-  // затемнення поверх картинки
+
   &::before {
     content: "";
     position: absolute;
@@ -330,7 +319,7 @@
 
   .container {
     position: relative;
-    z-index: 2; // щоб контент був над затемненням
+    z-index: 2;
   }
 }
 
@@ -350,7 +339,7 @@
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
-  flex: 1; /* заповнює весь простір */
+  flex: 1;
 }
 
 .title__5,
@@ -386,8 +375,7 @@
 }
 .title_two {
   position: relative;
-  // display: inline-block;
-  // margin: 0 auto;
+
   text-align: center;
   margin-bottom: 90px;
 
@@ -413,76 +401,6 @@
   width: 370px;
   height: 240px;
 }
-// =============     gallery =============
-
-.gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); // тепер 4 колонки
-  grid-template-rows: repeat(2, 214px);
-  gap: 10px;
-
-  .gallery__item {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 6px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    &:hover {
-      transform: scale(1.03);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    }
-  }
-
-  // перше зображення — велике (2x2)
-  .gallery__item--1 {
-    grid-column: 1 / 3; // займає 1-2 колонки
-    grid-row: 1 / 3; // займає 1-2 рядки
-  }
-
-  // решта зображень розташовані справа
-  .gallery__item--2 {
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
-  }
-
-  .gallery__item--3 {
-    grid-column: 4 / 5;
-    grid-row: 1 / 2;
-  }
-
-  .gallery__item--4 {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-  }
-
-  .gallery__item--5 {
-    grid-column: 4 / 5;
-    grid-row: 2 / 3;
-  }
-}
-
-@media (max-width: 992px) {
-  .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-
-    .gallery__item--1 {
-      grid-column: 1 / -1;
-      grid-row: auto;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery__grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.gallery__btn {
-  display: block;
-  margin: 60px auto;
-}
 
 // =========MAP===================
 #map {
@@ -493,22 +411,14 @@
 }
 // =========================== FOOTER  =========================
 
-//  data-speed="0.10">
-// " data-speed="0.40">
-// " data-speed="-0.20">
-
 .footer {
-  // max-width: 1600px;
   margin: 0 auto;
   position: relative;
   background: url("../assets/img/bg_foo.jpg") center/cover no-repeat fixed;
-  // text-align: center;
   overflow: hidden;
-  // padding: 120px 0;
   padding-top: 203px;
   padding-bottom: 234px;
 
-  // темне напівпрозоре накриття як у Coffee Journal
   &::before {
     content: "";
     position: absolute;
@@ -568,16 +478,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  // gap: 50px;
 }
 .info_form {
   margin-left: 60px;
 }
-
-// .form_cont {
-//   @include m.flex(space-between);
-//   gap: 54px;
-// }
 
 .form_menu {
   @include m.flex;
@@ -586,11 +490,8 @@
   text-align: center;
   gap: 30px;
   &__item {
-    // display: flex;
-    // align-items: center;
     gap: 12px;
     color: #1f2c4b;
-    // margin-bottom: 20px;
   }
   &__link {
     font-family: v.$font-primary;
@@ -614,7 +515,6 @@
   }
 }
 .form {
-  // background-color: #6c63ff;
   margin-right: 60px;
   display: flex;
   flex-direction: column;
@@ -627,7 +527,6 @@
 }
 .input {
   font-family: v.$font-primary;
-  // width: 310px;
   border: none;
   border-bottom: 1px solid v.$main-color;
   padding: 10px 0;
@@ -656,17 +555,10 @@
 }
 input:focus {
   outline: none;
-  border-color: inherit; /* або свій колір */
+  border-color: inherit;
   color: v.$main-color;
   opacity: 1;
 }
-
-// .input::placeholder {
-//   &:hover,
-//   &:focus {
-//     border: none;
-//   }
-// }
 
 .foo_btn {
   width: 140px;
@@ -683,7 +575,7 @@ input:focus {
 // ============validation==========
 
 .input.invalid {
-  border-bottom: 1px solid #e74c3c; // червона лінія
+  border-bottom: 1px solid #e74c3c;
   animation: shake 0.15s linear 2;
 }
 
@@ -709,5 +601,82 @@ input:focus {
   }
   100% {
     transform: translateX(0);
+  }
+}
+// ===========ATROPOS========
+// =============     gallery =============
+
+.gallery__btn {
+  display: block;
+  margin: 60px auto;
+}
+
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 214px);
+  gap: 10px;
+
+  .atropos {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .atropos-scale,
+  .atropos-rotate,
+  .atropos-inner {
+    width: 100%;
+    height: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .gallery__item--1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+  }
+
+  .gallery__item--2 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .gallery__item--3 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .gallery__item--4 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .gallery__item--5 {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+  }
+}
+
+@media (max-width: 992px) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+
+    .gallery__item--1 {
+      grid-column: 1 / -1;
+      grid-row: auto;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery__grid {
+    grid-template-columns: 1fr;
   }
 }

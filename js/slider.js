@@ -26,53 +26,6 @@ $(document).ready(function () {
 
 // ===============NEWS SLIDER============
 
-// $(document).ready(function () {
-//   $(".slider_cont").slick({
-//     slidesToShow: 3, // показувати по 3 слайди одночасно
-//     slidesToScroll: 1, // прокручувати по 1 слайду
-//     arrows: true, // вмикає стрілки < >
-//     dots: true, // додає точки внизу
-//     autoplay: false, // автоматична прокрутка
-//     autoplaySpeed: 2000, // інтервал 3 секунди
-//     infinite: true, // нескінченне прокручування
-//     responsive: [
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           slidesToShow: 2,
-//           arrows: false,
-//         },
-//       },
-//       {
-//         breakpoint: 768,
-//         settings: { slidesToShow: 1 },
-//       },
-//     ],
-//   });
-// });
-// // ===================
-// $(".slider_cont").slick({
-//   slidesToShow: 3,
-//   slidesToScroll: 1,
-//   arrows: true,
-//   dots: true,
-//   appendDots: $(".section__3 .container"), // dots виносимо під слайдер у контейнер
-//   autoplay: false,
-//   infinite: true,
-//   responsive: [
-//     {
-//       breakpoint: 1024,
-//       settings: {
-//         slidesToShow: 2,
-//         arrows: false,
-//       },
-//     },
-//     {
-//       breakpoint: 768,
-//       settings: { slidesToShow: 1 },
-//     },
-//   ],
-// });
 $(document).ready(function () {
   $(".slider_cont").slick({
     slidesToShow: 3,

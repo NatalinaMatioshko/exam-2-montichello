@@ -46,216 +46,26 @@
 }
 // ------------------------- Default Classes ---------------------
 
-// .slick-dots {
-//   padding-left: 0;
-//   list-style: none;
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   gap: 20px;
-//   position: absolute;
-//   top: 50%;
-//   right: 33px;
-//   transform: translateY(-50%);
-
-//   li {
-//     &.slick-active {
-//       button {
-//         background-color: antiquewhite;
-//       }
-//     }
-//   }
-
-//   button {
-//     font-size: 0;
-//     background: transparent;
-//     border: 1px solid #ffddff;
-//     width: 10px;
-//     height: 10px;
-//     padding: 0;
-//     border-radius: 50%;
-//     box-shadow: 0 0 6px 0px #4e6a6c;
-//     cursor: pointer;
-//   }
-// }
-
-// .slick-arrow {
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   z-index: 3;
-//   font-size: 0;
-//   border: 1px solid #fff;
-//   background: transparent;
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 50%;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     font-size: 30px;
-//     color: #fff;
-//     background-image: url("../assets/svg/down_aroow.svg");
-//   }
-// }
-
-// .slick-prev {
-//   left: 30px;
-// }
-
-// .slick-next {
-//   left: none;
-//   right: 30px;
-
-//   &::before {
-//     content: "";
-//     background-image: url("../assets/svg/right_arrow.svg");
-//   }
-// }
-
-// ==========NEWS SLIDER========
-// .slider_cont {
-//   position: static;
-// }
-
-// .wrapper_n {
-//   position: relative;
-// }
-// .slider_cont .slick-arrow {
-//   position: absolute;
-//   top: 50%;
-//   transform: translateY(-50%);
-//   z-index: 3;
-//   font-size: 0;
-//   border: 1px solid #fff;
-//   background: transparent;
-//   width: 50px;
-//   height: 50px;
-//   border-radius: 50%;
-
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     font-size: 30px;
-//     color: #fff;
-//     background-image: url("../assets/svg/left_arrow.svg") no-repeat center;
-//     width: 6px;
-//     height: 16px;
-//   }
-// }
-
-// .slick-prev {
-//   left: -88px;
-// }
-
-// .slick-next {
-//   left: none;
-//   right: -88px;
-
-//   &::before {
-//     content: "";
-//     background-image: url("../assets/svg/right_arrow.svg") no-repeat center;
-//   }
-// }
-// ==================
-
-// ==================
-// .section__3 {
-//   .slick-dots {
-//     position: absolute;
-//     bottom: -35px;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     display: flex !important;
-//     justify-content: center;
-//     align-items: center;
-//     gap: 10px;
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//     height: auto !important;
-//   }
-
-//   .slick-dots li {
-//     display: inline-block !important;
-//     width: 10px !important;
-//     height: 10px !important;
-//     border-radius: 50% !important;
-//     background: rgba(255, 255, 255, 0.7) !important;
-//     border: 1px solid rgba(123, 63, 0, 0.4) !important;
-//     transition: all 0.3s ease;
-//     cursor: pointer;
-//   }
-
-//   /* активна точка */
-//   .slick-dots li.slick-active {
-//     background: #7b3f00 !important;
-//     border-color: #7b3f00 !important;
-//   }
-// }
-
-// .section__3 {
-//   .slider_cont {
-//     position: relative;
-//     padding-bottom: 50px;
-//   }
-
-//   .slick-dots {
-//     position: absolute;
-//     bottom: 10px;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     display: flex !important;
-//     gap: 10px;
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//   }
-
-//   .slick-dots li {
-//     width: 10px;
-//     height: 10px;
-//     border-radius: 50%;
-//     background: rgba(255, 255, 255, 0.7);
-//     border: 1px solid rgba(123, 63, 0, 0.4);
-//     transition: all 0.3s ease;
-//     cursor: pointer;
-//   }
-
-//   .slick-dots li.slick-active {
-//     background: #7b3f00;
-//     border-color: #7b3f00;
-//   }
-// }
-
 .section__3 {
   position: relative;
 
   .slider_cont {
     position: relative;
-    padding-bottom: 60px; // запас під dots
+    padding-bottom: 60px;
 
-    /* скидає внутрішні відступи slick, щоб не обрізались margins */
     .slick-list {
-      margin: 0 -15px; // половина відступу картки
+      margin: 0 -15px;
     }
 
     .slick-slide {
-      margin: 0 15px; // відстань між картками
+      margin: 0 15px;
     }
   }
 
   /* ---------------------- Dots ---------------------- */
   .slick-dots {
     position: absolute;
-    bottom: 0; /* під самим слайдером */
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     display: flex !important;
@@ -267,9 +77,8 @@
     padding: 0;
   }
 
-  /* прибираємо будь-які дефолтні стилі кнопок */
   .slick-dots button {
-    all: unset; /* скидає padding, font-size, borders, line-height */
+    all: unset;
     display: block;
     width: 10px;
     height: 10px;
@@ -279,22 +88,17 @@
     cursor: pointer;
     transition: all 0.3s ease;
 
-    /* приховує цифри */
     font-size: 0;
     line-height: 0;
     text-indent: -9999px;
     overflow: hidden;
   }
 
-  /* активна крапка */
   .slick-dots .slick-active button {
-    // background-color: #7b3f00;
-    // border-color: #7b3f00;
     background-color: v.$main-color;
     border-color: v.$main-color;
   }
 
-  /* прибираємо можливість розтягування */
   .slick-dots li {
     width: auto;
     height: auto;
@@ -302,7 +106,6 @@
     padding: 0;
   }
 
-  /* --- Стилізація стрілок --- */
   .slick-arrow {
     position: absolute;
     top: 50%;
@@ -334,15 +137,13 @@
     }
   }
 
-  /* Ліва стрілка */
   .slick-prev {
-    left: -80px; // регулюй позицію
+    left: -80px;
     &::before {
       background-image: url("../assets/svg/left_arrow.svg");
     }
   }
 
-  /* Права стрілка */
   .slick-next {
     right: -80px;
     &::before {
