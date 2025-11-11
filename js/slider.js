@@ -1,15 +1,12 @@
-$(".btn").on("click", () => {
-  alert("SORRY! MAYBE NEXT TIME");
-});
-
 $(document).ready(function () {
   $(".hero__slider").slick({
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 3000,
     speed: 1400,
     dots: true,
     arrows: false,
     fade: true,
+    accessibility: true,
 
     responsive: [
       {
@@ -22,18 +19,19 @@ $(document).ready(function () {
       },
     ],
   });
-});
 
-// ===============NEWS SLIDER============
-
-$(document).ready(function () {
   $(".slider_cont").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     dots: true,
-    appendDots: $(".section__3 .container"),
     autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 800,
+    pauseOnHover: true,
+    accessibility: true,
+    dotsClass: "slick-dots slick-dots--news",
+    appendDots: $(".section__3 .container"),
     infinite: true,
     responsive: [
       {
