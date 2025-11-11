@@ -378,22 +378,53 @@ img {
   z-index: 100;
 }
 .scroll_down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background: transparent;
   cursor: pointer;
-  display: inline-block;
-  transition: transform 0.3s ease;
+  opacity: 0.8;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 .scroll_down_icon {
-  width: 36px;
-  height: 36px;
+  width: 16px;
+  height: 16px;
   fill: #fff;
-  opacity: 0.8;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease;
+}
+.scroll_down:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(4px);
 }
 .scroll_down:hover .scroll_down_icon {
-  transform: translateY(6px);
-  opacity: 1;
+  transform: translateY(3px);
+}
+.scroll_down:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.6);
+  outline-offset: 3px;
 }
 
+.scroll_down {
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
 .title {
   font-size: 44px;
   align-items: flex-start;
