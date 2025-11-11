@@ -9,7 +9,7 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: center,
     zoom: 12,
-    mapTypeId: "roadmap", // Тип карти: roadmap, satellite, hybrid, terrain
+    mapTypeId: "roadmap", 
     // styles: [
     //   { elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
     //   { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
@@ -19,7 +19,7 @@ function initMap() {
     // disableDefaultUI: true,
   });
 
-  const coffeeColor = "#9c2007"; //  кавовий колір
+  const coffeeColor = "#9c2007";
 
   const markerSvg =
     "data:image/svg+xml;charset=UTF-8," +
@@ -41,14 +41,13 @@ function initMap() {
     animation: google.maps.Animation.DROP,
     icon: {
       // url: markerSvg,
-      url: "../assets/svg/coffee-bean-marker.svg", //  файл
+      url: "../assets/svg/coffee-bean-marker.svg",
       // scaledSize: new google.maps.Size(100, 100),
       scaledSize: new google.maps.Size(30, 30),
       anchor: new google.maps.Point(50, 50),
     },
     title: "Київ",
   });
-  // Додавання інформаційного вікна при кліку на маркер
   const infoWindow = new google.maps.InfoWindow({
     content:
       '<div style="padding: 10px;"><h3>Київ</h3><p>Столиця України</p></div>',

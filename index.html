@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Montichello Cofffee</title>
+    <title>Monticello Coffee</title>
 
     <link
       rel="icon"
@@ -11,18 +11,38 @@
       href="./assets/img/favicon.png"
       sizes="32x32"
     />
+
     <link
       rel="stylesheet"
       type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css"
+      rel="stylesheet"
+    />
+
     <link
       rel="stylesheet"
       href="https://unpkg.com/atropos@2.0.2/atropos.min.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;1,400&family=Source+Sans+Pro:wght@400&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/main.css" />
   </head>
+
   <body>
     <header class="header">
       <div class="container">
@@ -36,13 +56,13 @@
               <a class="nav_menu__link" href="#projects">Our Coffee</a>
             </li>
             <li class="nav_menu__item">
-              <a class="nav_menu__link" href="#gallery">Coffee Moments</a>
-            </li>
-            <li class="nav_menu__item">
               <a class="nav_menu__link" href="#news">Coffee Journal</a>
             </li>
             <li class="nav_menu__item">
-              <a class="nav_menu__link" href="#contact">Visit Us</a>
+              <a class="nav_menu__link" href="#gallery">Coffee Moments</a>
+            </li>
+            <li class="nav_menu__item">
+              <a class="nav_menu__link" href="#contacts">Visit Us</a>
             </li>
           </ul>
 
@@ -105,13 +125,6 @@
             src="./assets/img/espresso-brew-dark-background.jpg"
             alt="Espresso brewing closeup on dark background"
           />
-          <div class="btn">
-            <button>
-              <svg class="arrow_down">
-                <use href="./assets/svg/sprite.svg#down_arrow"></use>
-              </svg>
-            </button>
-          </div>
         </div>
         <!-- ==================    2     ======================== -->
 
@@ -196,6 +209,16 @@
             alt="Portafilters with whole and ground coffee beans"
           />
         </div>
+
+        <div class="hero__dots"></div>
+
+        <div class="scroll">
+          <a href="#projects" class="scroll_down">
+            <svg class="scroll_down_icon">
+              <use href="./assets/svg/sprite.svg#down_arrow"></use>
+            </svg>
+          </a>
+        </div>
       </section>
 
       <!-- ========================    PROJECTS     ================================= -->
@@ -207,13 +230,19 @@
 
             <div class="project__info">
               <div class="img_container">
-                <img
-                  class="img_proj proj_img"
-                  src="./assets/img/espresso-machine-bar.jpg"
-                  alt="Espresso machine at a coffee bar"
-                  width="630"
-                  height="470"
-                />
+                <a
+                  href="./assets/img/espresso-machine-bar.jpg"
+                  data-lightbox="gallery"
+                  data-title="Espresso machine at a coffee bar"
+                >
+                  <img
+                    class="img_proj proj_img"
+                    src="./assets/img/espresso-machine-bar.jpg"
+                    alt="Espresso machine at a coffee bar"
+                    width="630"
+                    height="470"
+                  />
+                </a>
               </div>
 
               <div class="info_card">
@@ -224,7 +253,7 @@
                   and a bit of love. We believe coffee is more than a drink —
                   it’s a ritual that awakens your senses.
                 </p>
-                <button class="proj_btn btn" type="button">
+                <button class="proj_btn btn btn_b" type="button">
                   Discover More
                 </button>
                 <span class="project__location"
@@ -235,13 +264,19 @@
 
             <div class="project__info">
               <div class="img_container">
-                <img
-                  class="img_proj proj_img"
-                  src="./assets/img/coffee-pour-action.jpg"
-                  alt="Pouring coffee into a cup"
-                  width="630"
-                  height="470"
-                />
+                <a
+                  href="./assets/img/coffee-pour-action.jpg"
+                  data-lightbox="gallery"
+                  data-title="Pouring coffee into a cup"
+                >
+                  <img
+                    class="img_proj proj_img"
+                    src="./assets/img/coffee-pour-action.jpg"
+                    alt="Pouring coffee into a cup"
+                    width="630"
+                    height="470"
+                  />
+                </a>
               </div>
 
               <div class="info_card">
@@ -252,7 +287,7 @@
                   of the bean. We source responsibly, roast mindfully, and brew
                   with precision — every day.
                 </p>
-                <button class="proj_btn btn" type="button">
+                <button class="proj_btn btn btn_b" type="button">
                   Discover More
                 </button>
                 <span class="project__location">Ethiopia — Washed Arabica</span>
@@ -562,255 +597,245 @@
 
           <div class="gallery__grid">
             <!-- 1 -->
+
             <div class="atropos my-atropos gallery__item gallery__item--1">
-              <div class="atropos-scale">
-                <div class="atropos-rotate">
-                  <div class="atropos-inner">
-                    <img
-                      class="gallery__img"
-                      src="./assets/img/barista-pouring-latte-art.jpg"
-                      alt="Barista pouring milk to create latte art"
-                      data-atropos-offset="5"
-                    />
-                    <div class="gallery__overlay" data-atropos-offset="8"></div>
-                    <h3 class="gallery__caption" data-atropos-offset="12">
-                      Latte Art
-                    </h3>
+              <a
+                href="./assets/img/barista-pouring-latte-art.jpg"
+                data-lightbox="gallery"
+                data-title="Latte Art"
+              >
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner">
+                      <img
+                        class="gallery__img"
+                        src="./assets/img/barista-pouring-latte-art.jpg"
+                        alt="Barista pouring milk to create latte art"
+                        data-atropos-offset="5"
+                      />
+                      <div
+                        class="gallery__overlay"
+                        data-atropos-offset="8"
+                      ></div>
+                      <h3 class="gallery__caption" data-atropos-offset="12">
+                        Latte Art
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <!-- 2 -->
+
             <div class="atropos my-atropos gallery__item gallery__item--2">
-              <div class="atropos-scale">
-                <div class="atropos-rotate">
-                  <div class="atropos-inner">
-                    <img
-                      class="gallery__img"
-                      src="./assets/img/coffee-grind-process-latte-art.jpg"
-                      alt="Ground coffee and latte art preparation process"
-                      data-atropos-offset="5"
-                    />
-                    <div class="gallery__overlay" data-atropos-offset="8"></div>
-                    <h3 class="gallery__caption" data-atropos-offset="12">
-                      Brewing
-                    </h3>
+              <a
+                href="./assets/img/coffee-grind-process-latte-art.jpg"
+                data-lightbox="gallery"
+                data-title="Brewing"
+              >
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner">
+                      <img
+                        class="gallery__img"
+                        src="./assets/img/coffee-grind-process-latte-art.jpg"
+                        alt="Ground coffee and latte art preparation process"
+                        data-atropos-offset="5"
+                      />
+                      <div
+                        class="gallery__overlay"
+                        data-atropos-offset="8"
+                      ></div>
+                      <h3 class="gallery__caption" data-atropos-offset="12">
+                        Brewing
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <!-- 3 -->
+
             <div class="atropos my-atropos gallery__item gallery__item--3">
-              <div class="atropos-scale">
-                <div class="atropos-rotate">
-                  <div class="atropos-inner">
-                    <img
-                      class="gallery__img"
-                      src="./assets/img/coffee-beans-and-grinder.jpg"
-                      alt="Coffee grinder filled with roasted beans"
-                      data-atropos-offset="6"
-                    />
-                    <div class="gallery__overlay" data-atropos-offset="8"></div>
-                    <h3 class="gallery__caption" data-atropos-offset="12">
-                      Roasted Beans
-                    </h3>
+              <a
+                href="./assets/img/coffee-beans-and-grinder.jpg"
+                data-lightbox="gallery"
+                data-title="Roasted Beans"
+              >
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner">
+                      <img
+                        class="gallery__img"
+                        src="./assets/img/coffee-beans-and-grinder.jpg"
+                        alt="Coffee grinder filled with roasted beans"
+                        data-atropos-offset="6"
+                      />
+                      <div
+                        class="gallery__overlay"
+                        data-atropos-offset="8"
+                      ></div>
+                      <h3 class="gallery__caption" data-atropos-offset="12">
+                        Roasted Beans
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <!-- 4 -->
+
             <div class="atropos my-atropos gallery__item gallery__item--4">
-              <div class="atropos-scale">
-                <div class="atropos-rotate">
-                  <div class="atropos-inner">
-                    <img
-                      class="gallery__img"
-                      src="./assets/img/coffee-latte-art-stirring.jpg"
-                      alt="Person stirring latte art in a coffee cup"
-                      data-atropos-offset="6"
-                    />
-                    <div class="gallery__overlay" data-atropos-offset="8"></div>
-                    <h3 class="gallery__caption" data-atropos-offset="12">
-                      Art in Motion
-                    </h3>
+              <a
+                href="./assets/img/coffee-latte-art-stirring.jpg"
+                data-lightbox="gallery"
+                data-title="Art in Motion"
+              >
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner">
+                      <img
+                        class="gallery__img"
+                        src="./assets/img/coffee-latte-art-stirring.jpg"
+                        alt="Person stirring latte art in a coffee cup"
+                        data-atropos-offset="6"
+                      />
+                      <div
+                        class="gallery__overlay"
+                        data-atropos-offset="8"
+                      ></div>
+                      <h3 class="gallery__caption" data-atropos-offset="12">
+                        Art in Motion
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <!-- 5 -->
+
             <div class="atropos my-atropos gallery__item gallery__item--5">
-              <div class="atropos-scale">
-                <div class="atropos-rotate">
-                  <div class="atropos-inner">
-                    <img
-                      class="gallery__img"
-                      src="./assets/img/espresso-machine-shot.jpg"
-                      alt="Espresso shot being made with a coffee machine"
-                      data-atropos-offset="6"
-                    />
-                    <div class="gallery__overlay" data-atropos-offset="8"></div>
-                    <h3 class="gallery__caption" data-atropos-offset="12">
-                      Espresso
-                    </h3>
+              <a
+                href="./assets/img/espresso-machine-shot.jpg"
+                data-lightbox="gallery"
+                data-title="Espresso"
+              >
+                <div class="atropos-scale">
+                  <div class="atropos-rotate">
+                    <div class="atropos-inner">
+                      <img
+                        class="gallery__img"
+                        src="./assets/img/espresso-machine-shot.jpg"
+                        alt="Espresso shot being made with a coffee machine"
+                        data-atropos-offset="6"
+                      />
+                      <div
+                        class="gallery__overlay"
+                        data-atropos-offset="8"
+                      ></div>
+                      <h3 class="gallery__caption" data-atropos-offset="12">
+                        Espresso
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
-          <button class="btn gallery__btn" type="button">Discover More</button>
+          <button class="btn gallery__btn btn_b" type="button">
+            Discover More
+          </button>
         </div>
       </section>
-      <!-- ========================    contact     ================================= -->
 
-      <section class="section section__5" id="map">
-        <div class="container contact">
-          <h2 class="title title__2 title_two">GET IN TOUCH</h2>
-          <div class="contact__container">
-            <div class="info_form">
-              <ul class="form_menu">
-                <li class="form_menu__item">
-                  <a
-                    class="form_menu__link"
-                    href="https://www.google.com/maps?q=91+Nolan+Extensions+Suite+670"
-                    target="_blank"
-                  >
-                    <svg class="form_menu__icon">
-                      <use href="./assets/svg/sprite.svg#location"></use>
-                    </svg>
-                    91 Nolan Extensions Suite 670</a
-                  >
-                </li>
-                <li class="form_menu__item">
-                  <a class="form_menu__link" href="tel:+0013568682454">
-                    <svg class="form_menu__icon">
-                      <use href="./assets/svg/sprite.svg#phone"></use>
-                    </svg>
-                    +001 356-868-2454
-                  </a>
-                </li>
-                <li class="form_menu__item">
-                  <a
-                    class="form_menu__link"
-                    href="mailto:montichello@service.com"
-                  >
-                    <svg class="form_menu__icon">
-                      <use href="./assets/svg/sprite.svg#inbox"></use>
-                    </svg>
-                    montichello@service.com
-                  </a>
-                </li>
-                <li class="form_menu__item">
-                  <a class="form_menu__link" href="">
-                    <svg class="form_menu__icon">
-                      <use href="./assets/svg/sprite.svg#clock"></use>
-                    </svg>
-                    <time datetime="07:05">From 07:05AM to 19: 30PM</time>
-                  </a>
-                </li>
-              </ul>
-            </div>
+      <!-- ========================    Map     ================================= -->
 
-            <form class="form">
-              <input
-                class="input"
-                type="text"
-                name="name"
-                placeholder="Mollie Medina"
-              />
-              <input
-                class="input"
-                type="email"
-                name="mail"
-                placeholder="Email"
-              />
-              <button class="btn foo_btn" type="submit">SUBMIT</button>
-            </form>
-          </div>
-        </div>
-      </section>
+      <section class="section section__5" id="map"></section>
     </main>
     <!-- ========================    FOOTER     ================================= -->
 
     <footer class="footer">
-      <!-- ========form======== -->
+      <div class="contacts" id="contacts">
+        <h2 class="title title__2 title_two">GET IN TOUCH</h2>
+
+        <div class="contacts__container">
+          <div class="info_form">
+            <ul class="form_menu">
+              <li class="form_menu__item">
+                <a
+                  class="form_menu__link"
+                  href="https://www.google.com/maps?q=91+Nolan+Extensions+Suite+670"
+                  target="_blank"
+                >
+                  <svg class="form_menu__icon">
+                    <use href="./assets/svg/sprite.svg#location"></use>
+                  </svg>
+                  91 Nolan Extensions Suite 670</a
+                >
+              </li>
+              <li class="form_menu__item">
+                <a class="form_menu__link" href="tel:+0013568682454">
+                  <svg class="form_menu__icon">
+                    <use href="./assets/svg/sprite.svg#phone"></use>
+                  </svg>
+                  +001 356-868-2454
+                </a>
+              </li>
+              <li class="form_menu__item">
+                <a
+                  class="form_menu__link"
+                  href="mailto:montichello@service.com"
+                >
+                  <svg class="form_menu__icon">
+                    <use href="./assets/svg/sprite.svg#inbox"></use>
+                  </svg>
+                  montichello@service.com
+                </a>
+              </li>
+              <li class="form_menu__item">
+                <a class="form_menu__link" href>
+                  <svg class="form_menu__icon">
+                    <use href="./assets/svg/sprite.svg#clock"></use>
+                  </svg>
+                  <time datetime="07:05">From 07:05AM to 19: 30PM</time>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form" id="contacts-form" novalidate>
+            <input
+              class="input"
+              type="text"
+              name="userName"
+              placeholder="Mollie Medina"
+              required
+            />
+            <input
+              class="input"
+              type="email"
+              name="userEmail"
+              placeholder="Email"
+              required
+            />
+            <button class="btn foo_btn" type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </div>
 
       <div class="container footer__cont">
-        <div class="contact">
-          <h2 class="title title__2 title_two">GET IN TOUCH</h2>
-          <div class="contact__container">
-            <div class="info_form">
-              <ul class="form_menu">
-                <li class="form_menu__item">
-                  <a
-                    class="form_menu__link"
-                    href="https://www.google.com/maps?q=91+Nolan+Extensions+Suite+670"
-                    target="_blank"
-                  >
-                    <svg class="form_menu__icon">
-                      <use href="./assets/svg/sprite.svg#location"></use>
-                    </svg>
-                    91 Nolan Extensions Suite 670</a
-                  >
-                </li>
-                <li class="form_menu__item">
-                  <a class="form_menu__link" href="tel:+0013568682454">
-                    <svg class="form_menu__icon">
-                      <use href="./assets/svg/sprite.svg#phone"></use>
-                    </svg>
-                    +001 356-868-2454
-                  </a>
-                </li>
-                <li class="form_menu__item">
-                  <a
-                    class="form_menu__link"
-                    href="mailto:montichello@service.com"
-                  >
-                    <svg class="form_menu__icon">
-                      <use href="./assets/svg/sprite.svg#inbox"></use>
-                    </svg>
-                    montichello@service.com
-                  </a>
-                </li>
-                <li class="form_menu__item">
-                  <a class="form_menu__link" href="">
-                    <svg class="form_menu__icon">
-                      <use href="./assets/svg/sprite.svg#clock"></use>
-                    </svg>
-                    <time datetime="07:05">From 07:05AM to 19: 30PM</time>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <form class="form" id="contact-form" novalidate>
-              <input
-                class="input"
-                type="text"
-                name="name"
-                placeholder="Mollie Medina"
-              />
-              <input
-                class="input"
-                type="email"
-                name="email"
-                placeholder="Email"
-              />
-              <button class="btn foo_btn" type="submit">SUBMIT</button>
-            </form>
-          </div>
-        </div>
-        <!-- ========footer======== -->
         <div class="logo_cont">
-          <a class="nav_link" href="">
+          <a class="nav_link" href="./index.html">
             <img class="logo" src="./assets/svg/logo.svg" alt="logo" />
           </a>
           <small class="small">Copyrights © 2020 Montichello</small>
         </div>
+
         <div class="soc_cont">
           <ul class="soc_menu">
             <li class="soc_menu__item">
@@ -855,15 +880,19 @@
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
+
     <script src="https://unpkg.com/atropos@2.0.2/atropos.min.js"></script>
+
+    <script src="./js/map.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/atropos.js"></script>
+    <script src="./js/main.js"></script>
     <script
       async
       defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAm8S3QSjU-7RdqzCWzbTTyc-Ol5lgqe4o&callback=initMap"
     ></script>
-    <script src="./js/map.js"></script>
-    <script src="./js/slider.js"></script>
-    <script src="./js/atropos.js"></script>
-    <script src="./js/main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
   </body>
 </html>

@@ -14,7 +14,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: v.$font-primary;
+
   min-height: 100dvh;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 ul,

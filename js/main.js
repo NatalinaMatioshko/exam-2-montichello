@@ -1,6 +1,5 @@
 "use strict";
 
-// ====================HEADER=============
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(thirdSection);
 });
 
-// ================valid & error ============
 
 const form = document.getElementById("contact-form");
 

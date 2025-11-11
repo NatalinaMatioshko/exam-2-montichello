@@ -1,16 +1,5 @@
 @use "./vars" as v;
 
-@mixin font-face($family, $file-path, $weight, $style: normal) {
-  @font-face {
-    font-family: $family;
-    src: url($file-path + ".woff2") format("woff2"),
-      url($file-path + ".woff") format("woff");
-    font-weight: $weight;
-    font-style: $style;
-    font-display: swap;
-  }
-}
-
 @mixin flex($justify: center, $align: center) {
   display: flex;
   justify-content: $justify;
@@ -24,4 +13,33 @@
   color: $color;
   text-transform: uppercase;
   text-align: $align;
+}
+
+@mixin hover-focus {
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:active {
+    @content;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == desktop {
+    @media (max-width: v.$desktop) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: v.$tablet) {
+      @content;
+    }
+  } @else if $breakpoint == mobile {
+    @media (max-width: v.$mobile) {
+      @content;
+    }
+  } @else if $breakpoint == small-mobile {
+    @media (max-width: v.$small-mobile) {
+      @content;
+    }
+  }
 }
