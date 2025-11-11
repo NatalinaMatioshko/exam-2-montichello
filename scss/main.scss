@@ -24,7 +24,10 @@
     min-height: 700px;
   }
 }
-
+.section__1 {
+position: relative;
+min-height: 100vh;
+}
 // ==================HEADER========================
 .header {
   position: fixed;

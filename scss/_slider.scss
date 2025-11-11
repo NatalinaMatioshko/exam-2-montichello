@@ -5,8 +5,12 @@
 .hero__slider {
   position: relative;
   @include m.flex;
-
-
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 
   &__content {
     position: absolute;
@@ -54,27 +58,24 @@
 
   .slider_cont {
     position: relative;
-    padding-bottom: 60px; 
+    padding-bottom: 60px;
 
-   
     .slick-list {
-      margin: 0 -15px; 
+      margin: 0 -15px;
     }
 
     .slick-slide {
-      margin: 0 15px; 
+      margin: 0 15px;
     }
   }
 }
-
-
 
 .slick-dots {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
@@ -83,9 +84,8 @@
   padding: 0;
 }
 
-
 .slick-dots button {
-  all: unset; 
+  all: unset;
   display: block;
   width: 10px;
   height: 10px;
@@ -95,7 +95,6 @@
   cursor: pointer;
   transition: all 0.3s ease;
 
-
   font-size: 0;
   line-height: 0;
   text-indent: -9999px;
@@ -103,11 +102,9 @@
 }
 
 .slick-dots .slick-active button {
-
   background-color: v.$main-color;
   border-color: v.$main-color;
 }
-
 
 .slick-dots li {
   width: auto;
@@ -115,7 +112,6 @@
   margin: 0;
   padding: 0;
 }
-
 
 .slick-arrow {
   position: absolute;
@@ -149,14 +145,12 @@
   }
 }
 
-
 .slick-prev {
-  left: -80px; 
+  left: -80px;
   &::before {
     background-image: url("../assets/svg/left_arrow.svg");
   }
 }
-
 
 .slick-next {
   right: -80px;
@@ -171,7 +165,6 @@
   }
 }
 
-
 .hero__slider .slick-dots {
   position: absolute;
   all: unset;
@@ -179,7 +172,6 @@
   flex-direction: column;
   right: 0;
   list-style: none;
-
 
   gap: 40px;
   margin: 0;

@@ -3,6 +3,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  height: 100vh;
+  min-height: 600px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 .hero__slider__content {
   position: absolute;
@@ -265,6 +271,11 @@ img {
 }
 .section__5 {
   min-height: 700px;
+}
+
+.section__1 {
+  position: relative;
+  min-height: 100vh;
 }
 
 .header {

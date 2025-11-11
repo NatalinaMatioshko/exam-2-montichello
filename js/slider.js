@@ -5,7 +5,7 @@ $(".btn").on("click", () => {
 $(document).ready(function () {
   $(".hero__slider").slick({
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 1000,
     speed: 1400,
     dots: true,
     arrows: false,

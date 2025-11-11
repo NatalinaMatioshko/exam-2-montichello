@@ -1,12 +1,10 @@
 "use strict";
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
-  const thirdSection = document.querySelector(".section__3"); 
+  const thirdSection = document.querySelector(".section__3");
 
   if (!header || !thirdSection) return;
-
 
   header.classList.add("header--fixed");
 
@@ -19,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
       lastScrollY = window.scrollY;
 
       if (entry.isIntersecting && scrollingDown) {
-    
         header.classList.add("header--hidden");
         isHidden = true;
       } else if (!entry.isIntersecting && !scrollingDown && isHidden) {
@@ -29,18 +26,27 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       root: null,
-      threshold: 0.2, 
+      threshold: 0.2,
     }
   );
 
   observer.observe(thirdSection);
 });
 
+$(document).ready(function () {
+  $(".scroll_down").on("click", function (e) {
+    e.preventDefault();
+    const target = $("#projects");
+    if (target.length) {
+      $("html, body").animate({ scrollTop: target.offset().top }, 800);
+    }
+  });
+});
 
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); 
+  e.preventDefault();
 
   const nameInput = form.elements.name;
   const emailInput = form.elements.email;
