@@ -1,8 +1,19 @@
 "use strict";
+// LOADER
+
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    preloader.style.opacity = "0";
+    setTimeout(() => preloader.remove(), 600);
+  }
+});
 
 $(".btn_b").on("click", () => {
   alert("SORRY! MAYBE NEXT TIME");
 });
+
+// ====================HEADER=============
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
@@ -37,18 +48,19 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(thirdSection);
 });
 
+// =====scroll============
+
 $(document).ready(function () {
   $(".scroll_down").on("click", function (e) {
     e.preventDefault();
     const target = $("#projects");
     if (target.length) {
-      $("html, body").animate(
-        { scrollTop: target.offset().top },
-        800 // 800 — тривалість анімації у мілісекундах
-      );
+      $("html, body").animate({ scrollTop: target.offset().top }, 800);
     }
   });
 });
+
+// ================ SUBMIT ============
 
 const form = document.querySelector("#contacts-form");
 if (form) {
@@ -67,7 +79,6 @@ if (form) {
       form.userEmail.focus();
       return;
     }
-
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       alert("Enter correct email!");
       form.userEmail.focus();
@@ -79,3 +90,16 @@ if (form) {
     form.reset();
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".burger");
+  const navMenu = document.querySelector(".nav_menu");
+
+  burger?.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+
+    const isExpanded = burger.classList.contains("active");
+    burger.setAttribute("aria-expanded", isExpanded);
+  });
+});

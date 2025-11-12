@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  // HEADER
+
   $(".hero__slider").slick({
     autoplay: true,
     autoplaySpeed: 3000,
@@ -21,6 +23,8 @@ $(document).ready(function () {
   });
 
   $(".slider_cont").slick({
+    // NEWS
+
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
@@ -30,12 +34,11 @@ $(document).ready(function () {
     speed: 800,
     pauseOnHover: true,
     accessibility: true,
-    dotsClass: "slick-dots slick-dots--news",
     appendDots: $(".section__3 .container"),
     infinite: true,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           arrows: false,

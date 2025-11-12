@@ -3,6 +3,8 @@
 @use "./mixins" as m;
 @use "./extends";
 @use "./common";
+@use "./responsive";
+@use "./loader";
 
 .container {
   max-width: 1170px;
@@ -13,9 +15,12 @@
 .section {
   min-height: 800px;
   margin: 0 auto;
-
   &:not(:first-of-type) {
     margin-top: 150px;
+  }
+  &__1 {
+    position: relative;
+    min-height: 100vh;
   }
   &__3 {
     min-height: 978px;
@@ -23,10 +28,6 @@
   &__5 {
     min-height: 700px;
   }
-}
-.section__1 {
-  position: relative;
-  min-height: 100vh;
 }
 // ==================HEADER========================
 .header {
@@ -60,37 +61,32 @@
       position: relative;
     }
     &__link {
-      font-family: "Source Sans Pro", sans-serif;
-      font-weight: 400;
-      font-size: 14px;
+      font-family: v.$font-tertiary;
+      font-weight: v.$main-font-weight;
+      font-size: v.$third-font-size;
       color: v.$second-color;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      padding-left: 25px;
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        width: 10px;
-        height: 10px;
-        border: 1px solid (v.$second-color);
-        border-radius: 50%;
-        opacity: 0.5;
-        transition: all 0.3s ease;
+      @include m.respond(tablet) {
+        padding-left: 25px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 10px;
+          height: 10px;
+          border: 1px solid (v.$second-color);
+          border-radius: 50%;
+          opacity: 0.5;
+          transition: all 0.3s ease;
+        }
+        &:hover::before {
+          background-color: v.$second-color;
+          opacity: 1;
+        }
       }
-      &:hover::before {
-        background-color: v.$second-color;
-        opacity: 1;
-      }
-    }
-  }
-
-  @media (max-width: 768px) {
-    &_menu {
-      display: none;
     }
   }
 }
@@ -240,7 +236,6 @@
   @include m.flex(space-between, flex-start);
 
   gap: 60px;
-
   min-height: 527px;
 
   &:not(:first-of-type) {
@@ -361,7 +356,7 @@
 // =============NEWS=============
 .section__3 {
   position: relative;
-  background: url("../assets/img/bg.jpg") no-repeat center center/cover;
+  background: url("../assets/img/bg.webp") no-repeat center center/cover;
   background-attachment: fixed;
   padding: 120px 0;
   color: #fff;
@@ -475,7 +470,7 @@
 
 .footer {
   position: relative;
-  background: url("../assets/img/bg_foo.jpg") center/cover no-repeat fixed;
+  background: url("../assets/img/bg_foo.webp") center/cover no-repeat fixed;
   min-height: 549px;
   @include m.flex;
   flex-direction: column;
@@ -537,11 +532,11 @@
   text-align: left;
   @include m.flex(space-between, flex-start);
 }
-.info_form {
+.info_contact {
   margin-left: 60px;
 }
 
-.form_menu {
+.contact_menu {
   @include m.flex(center, flex-start);
   flex-direction: column;
   text-align: center;
@@ -652,7 +647,7 @@ input:focus {
   }
 
   .gallery__item--1 {
-    grid-column: 1 / 3;
+    grid-column: 1 / 3; 
     grid-row: 1 / 3;
   }
 
@@ -677,37 +672,7 @@ input:focus {
   }
 }
 
-@media (max-width: 992px) {
-  .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-
-    .gallery__item--1 {
-      grid-column: 1 / -1;
-      grid-row: auto;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery__grid {
-    grid-template-columns: 1fr;
-  }
-}
-.gallery__item--1 {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 70px;
-    height: 70px;
-    background: url("../assets/svg/magnifying-glass.svg") no-repeat center;
-    background-size: contain;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    opacity: 0.7;
-  }
+.section__4 a {
+  cursor: url(../assets/svg/magnifying-glass.svg), auto;
+  cursor: url(../assets/svg/magnifying-glass.svg) 15 15, move;
 }
