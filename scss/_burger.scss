@@ -50,7 +50,6 @@
   }
 }
 
-// ================== NAV=====================
 
 @include m.respond(tablet) {
   .burger {
@@ -100,23 +99,5 @@
         color: v.$second-color;
       }
     }
-  }
-}
-
-@media (max-width: 992px) {
-  .gallery__grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-
-    .gallery__item--1 {
-      grid-column: 1 / -1;
-      grid-row: auto;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery__grid {
-    grid-template-columns: 1fr;
   }
 }

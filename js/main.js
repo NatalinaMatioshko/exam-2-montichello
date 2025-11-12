@@ -13,8 +13,6 @@ $(".btn_b").on("click", () => {
   alert("SORRY! MAYBE NEXT TIME");
 });
 
-// ====================HEADER=============
-
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector(".header");
   const thirdSection = document.querySelector(".section__3");
@@ -48,8 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(thirdSection);
 });
 
-// =====scroll============
-
 $(document).ready(function () {
   $(".scroll_down").on("click", function (e) {
     e.preventDefault();
@@ -60,12 +56,11 @@ $(document).ready(function () {
   });
 });
 
-// ================ SUBMIT ============
-
 const form = document.querySelector("#contacts-form");
 if (form) {
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
+
     const name = form.userName.value.trim();
     const email = form.userEmail.value.trim();
 
@@ -79,15 +74,23 @@ if (form) {
       form.userEmail.focus();
       return;
     }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
       alert("Enter correct email!");
       form.userEmail.focus();
       return;
     }
 
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
+    localStorage.setItem("userName", name);
+    localStorage.setItem("userEmail", email);
+
+    console.log("Saved:", {
+      userName: localStorage.getItem("userName"),
+      userEmail: localStorage.getItem("userEmail"),
+    });
+
     form.reset();
+    alert("Data saved to localStorage!");
   });
 }
 

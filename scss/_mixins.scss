@@ -29,6 +29,10 @@
     @media (max-width: v.$desktop) {
       @content;
     }
+  } @else if $breakpoint == desktop_min {
+    @media (max-width: v.$desktop_min) {
+      @content;
+    }
   } @else if $breakpoint == tablet {
     @media (max-width: v.$tablet) {
       @content;

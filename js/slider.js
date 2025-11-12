@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // HEADER
+
 
   $(".hero__slider").slick({
     autoplay: true,
@@ -9,7 +9,7 @@ $(document).ready(function () {
     arrows: false,
     fade: true,
     accessibility: true,
-
+ 
     responsive: [
       {
         breakpoint: 992,
@@ -23,30 +23,35 @@ $(document).ready(function () {
   });
 
   $(".slider_cont").slick({
-    // NEWS
+    
 
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     dots: true,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 4000, 
     speed: 800,
     pauseOnHover: true,
     accessibility: true,
-    appendDots: $(".section__3 .container"),
+
     infinite: true,
     responsive: [
       {
+       
         breakpoint: 1200,
         settings: {
           slidesToShow: 2,
           arrows: false,
+          dots: false,
         },
       },
       {
         breakpoint: 768,
-        settings: { slidesToShow: 1 },
+        settings: {
+          slidesToShow: 1,
+          dots: false,
+        },
       },
     ],
   });

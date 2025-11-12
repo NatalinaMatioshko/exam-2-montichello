@@ -9,14 +9,7 @@ function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     center: center,
     zoom: 12,
-    mapTypeId: "roadmap", // Тип карти: roadmap, satellite, hybrid, terrain
-    // styles: [
-    //   { elementType: "geometry", stylers: [{ color: "#f5f5f5" }] },
-    //   { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
-    //   { elementType: "labels.text.fill", stylers: [{ color: "#616161" }] },
-    //   { elementType: "labels.text.stroke", stylers: [{ color: "#f5f5f5" }] },
-    // ],
-    // disableDefaultUI: true,
+    mapTypeId: "roadmap", 
   });
 
   const coffeeColor = "#9c2007";
