@@ -1,6 +1,4 @@
 $(document).ready(function () {
-
-
   $(".hero__slider").slick({
     autoplay: true,
     autoplaySpeed: 3000,
@@ -9,7 +7,7 @@ $(document).ready(function () {
     arrows: false,
     fade: true,
     accessibility: true,
- 
+
     responsive: [
       {
         breakpoint: 992,
@@ -23,14 +21,12 @@ $(document).ready(function () {
   });
 
   $(".slider_cont").slick({
-    
-
     slidesToShow: 3,
     slidesToScroll: 1,
     arrows: true,
     dots: true,
     autoplay: true,
-    autoplaySpeed: 4000, 
+    autoplaySpeed: 2000,
     speed: 800,
     pauseOnHover: true,
     accessibility: true,
@@ -38,7 +34,6 @@ $(document).ready(function () {
     infinite: true,
     responsive: [
       {
-       
         breakpoint: 1200,
         settings: {
           slidesToShow: 2,
